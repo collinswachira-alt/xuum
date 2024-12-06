@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Reset</title>
+  <link rel="stylesheet" href="reset.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Request Reset Section -->
+    <section id="request-reset" class="active-section">
+      <h1>Request Password Reset</h1>
+      <form id="request-reset-form">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <button type="submit">Request Reset</button>
+        <div id="loader-request-reset" class="loader hidden"></div>
+        <p id="message-request-reset"></p>
+      </form>
+    </section>
+
+    <!-- Verify Temporary Password Section -->
+    <section id="verify-temp-password">
+      <h1>Verify Temporary Password</h1>
+      <form id="verify-temp-password-form">
+        <label for="temp-password">Temporary Password</label>
+        <input type="text" id="temp-password" placeholder="Enter temporary password" required>
+        <label for="new-password">New Password</label>
+        <input type="password" id="new-password" placeholder="Enter new password" required>
+        <div id="password-strength" class="strength-meter"></div>
+        <label for="confirm-password">Confirm New Password</label>
+        <input type="password" id="confirm-password" placeholder="Confirm new password" required>
+        <button type="submit">Reset Password</button>
+        <div id="loader-verify-reset" class="loader hidden"></div>
+        <p id="message-verify-reset"></p>
+      </form>
+    </section>
+  </div>
+
+  <script src="reset.js"></script>
+</body>
+</html>
